@@ -1,5 +1,6 @@
 {
-  "name": "your-portfolio-nextjs",
+  "name": "my-portfolio",
+  "description": "A personal portfolio website built with Next.js and Tailwind CSS",
   "version": "0.1.0",
   "private": true,
   "scripts": {

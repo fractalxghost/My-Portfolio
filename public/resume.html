@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume | Vibhu - Creative Technologist</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --text-primary: #2d3748; /* Dark Gray-Blue */
+            --text-secondary: #4a5568; /* Medium Gray-Blue */
+            --accent-primary: #38B2AC; /* Teal */
+            --accent-secondary: #2C7A7B; /* Darker Teal */
+            --background-light: #f7fafc; /* Very Light Gray */
+            --background-white: #ffffff;
+            --border-color: #e2e8f0; /* Light Gray Border */
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.7;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-light);
+            color: var(--text-secondary);
+            font-size: 16px;
+        }
+        .resume-container {
+            max-width: 850px; /* Optimal reading width */
+            margin: 30px auto;
+            padding: 50px;
+            background-color: var(--background-white);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            border-radius: 10px;
+        }
+        a {
+            color: var(--accent-primary);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        a:hover {
+            color: var(--accent-secondary);
+            text-decoration: underline;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--text-primary);
+            margin-top: 0;
+        }
+
+        /* Header Section */
+        .resume-header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .profile-image-container {
+            margin-bottom: 20px; /* Space below image */
+        }
+        .profile-image {
+            width: 130px; /* Adjust size as needed */
+            height: 130px;
+            border-radius: 50%; /* Circular image */
+            object-fit: cover; /* Ensure image covers the area well */
+            border: 4px solid var(--accent-primary); /* Accent border */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .resume-header h1 { /* Name */
+            font-size: 2.8em; /* Adjusted size if image is present */
+            font-weight: 700;
+            color: var(--text-primary);
+            letter-spacing: -1px;
+            margin-bottom: 8px;
+        }
+        .resume-header .job-title {
+            font-size: 1.2em; /* Adjusted size */
+            font-weight: 400;
+            color: var(--accent-primary);
+            margin-bottom: 15px;
+        }
+        .contact-details {
+            font-size: 0.9em;
+            color: var(--text-secondary);
+        }
+        .contact-details a {
+            color: var(--text-secondary); 
+            margin: 0 7px;
+        }
+         .contact-details a:hover {
+            color: var(--accent-primary);
+        }
+        .contact-details span:not(:last-child):after {
+            content: "|";
+            margin-left: 14px;
+            color: var(--border-color);
+        }
+
+
+        /* Section Styling */
+        .resume-section {
+            margin-bottom: 35px;
+        }
+        .resume-section:last-of-type {
+            margin-bottom: 0;
+        }
+        .resume-section-title {
+            font-size: 1.5em;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--accent-primary);
+            display: inline-block;
+        }
+
+        .summary-text {
+            font-size: 1.05em;
+            text-align: left; 
+        }
+
+        /* Skills Section */
+        .skills-layout {
+            display: grid;
+            grid-template-columns: 1fr; 
+            gap: 20px;
+        }
+        @media (min-width: 600px) { 
+            .skills-layout {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 30px;
+            }
+        }
+        .skills-category h3 {
+            font-size: 1.15em;
+            font-weight: 600;
+            color: var(--accent-secondary);
+            margin-bottom: 12px;
+        }
+        .skills-category ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .skills-category li {
+            font-size: 0.9em;
+            background-color: #EDF2F7; 
+            color: var(--text-secondary);
+            padding: 6px 12px;
+            border-radius: 15px; 
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+         .skills-category li:hover {
+            background-color: var(--accent-primary);
+            color: var(--background-white);
+        }
+        
+
+        /* Experience & Projects Section */
+        .item-entry {
+            margin-bottom: 25px;
+        }
+        .item-entry:last-child {
+            margin-bottom: 0;
+        }
+        .item-title { /* For Job Title, Project Title, Degree Title */
+            font-size: 1.2em;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 2px;
+        }
+        .item-subtitle { /* Company Name / Tech Stack / University Name */
+            font-size: 1em;
+            font-weight: 500;
+            color: var(--accent-primary);
+            margin-bottom: 4px;
+        }
+        .item-date {
+            font-size: 0.85em;
+            color: #718096; 
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+        .item-description p, .item-description ul {
+            font-size: 0.95em;
+            margin-bottom: 8px;
+        }
+        .item-description ul {
+            list-style: disc;
+            padding-left: 20px;
+        }
+        .item-description ul li {
+            margin-bottom: 4px;
+        }
+
+        .project-links {
+            margin-top: 10px;
+        }
+        .project-links a {
+            font-size: 0.9em;
+            margin-right: 15px;
+            font-weight: 600;
+        }
+        .project-tags {
+             margin-top: 8px;
+        }
+        .project-tags span {
+            font-size: 0.8em;
+            background-color: var(--accent-primarySoft, #e6fffa);
+            color: var(--accent-secondary, #2C7A7B);
+            padding: 3px 8px;
+            border-radius: 4px;
+            margin-right: 6px;
+            margin-bottom: 6px;
+            display: inline-block;
+            font-weight: 500;
+        }
+
+        .placeholder-text { /* Style for the placeholder text for user to replace */
+            color: #dd1f1f; /* Make it stand out, e.g., red */
+            font-style: italic;
+            font-weight: bold; /* Make it bold to catch attention */
+        }
+
+
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            .resume-container {
+                margin: 15px;
+                padding: 25px;
+            }
+            .resume-header h1 {
+                font-size: 2.2em;
+            }
+            .profile-image {
+                width: 100px;
+                height: 100px;
+            }
+            .resume-header .job-title {
+                font-size: 1.1em;
+            }
+            .contact-details span {
+                display: block;
+                margin: 4px 0;
+            }
+            .contact-details span:not(:last-child):after {
+                 display: none; 
+            }
+            .resume-section-title {
+                font-size: 1.3em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="resume-container">
+        <header class="resume-header">
+            <div class="profile-image-container">
+                <img src="https://vprosper.in/wp-content/uploads/2024/07/Team-2.jpg" alt="Vibhu - Profile" class="profile-image">
+            </div>
+            <h1>VIBHU</h1>
+            <p class="job-title">Creative Technologist & AI Developer</p>
+            <div class="contact-details">
+                <span>Ahmedabad, India</span>
+                <span><a href="tel:+916352798249">+91 6352798249</a></span>
+                <span><a href="mailto:vibhu.thankii@gmail.com">vibhu.thankii@gmail.com</a></span>
+                <span><a href="https://myywork.netlify.app" target="_blank">Portfolio</a></span>
+                <span><a href="https://www.linkedin.com/in/vibhu-thankii" target="_blank">LinkedIn</a></span>
+                <span><a href="https://github.com/vibhu-thankii" target="_blank">GitHub</a></span>
+            </div>
+        </header>
+
+        <section class="summary-section resume-section">
+            <h2 class="resume-section-title">Summary</h2>
+            <p class="summary-text">
+                Dynamic Director & COO with a strong background as a Creative Technologist and AI Developer, currently leading operations for "V Prosper," an innovative wellness platform. Combines expertise in full-stack development (React, Next.js, Python, FastAPI, Flask) and AI integration with strategic oversight of technology, marketing, sales, and finance. Proven track record in developing user-centric web and mobile applications, from initial concept to deployment. Eager to leverage a comprehensive skill set to drive success in challenging freelance projects.
+            </p>
+        </section>
+
+        <section class="skills-section resume-section">
+            <h2 class="resume-section-title">Skills</h2>
+            <div class="skills-layout">
+                <div class="skills-category">
+                    <h3>Development & Engineering</h3>
+                    <ul>
+                        <li>Python (FastAPI, Flask, Django)</li>
+                        <li>JavaScript (ES6+, React, Next.js)</li>
+                        <li>HTML5, CSS3 (SASS, Tailwind CSS)</li>
+                        <li>SQL & NoSQL (PostgreSQL, MongoDB)</li>
+                        <li>Node.js, Express.js</li>
+                        <li>Expo (React Native)</li>
+                        <li>SQLModel (ORM)</li>
+                        <li>RESTful API Design</li>
+                        <li>Git & GitHub</li>
+                        <li>Docker</li>
+                    </ul>
+                </div>
+                <div class="skills-category">
+                    <h3>Design & AI</h3>
+                    <ul>
+                        <li>UI/UX Design & Research</li>
+                        <li>Wireframing & Prototyping</li>
+                        <li>Figma, Adobe XD, Sketch</li>
+                        <li>Responsive Design & Accessibility</li>
+                        <li>AI Model Integration (LLMs)</li>
+                        <li>Speech-to-Text (STT)</li>
+                        <li>Text-to-Speech (TTS)</li>
+                        <li>Voice UI Development</li>
+                        <li>ML Workflow Management</li>
+                    </ul>
+                </div>
+                 <div class="skills-category">
+                    <h3>Operations & Management</h3>
+                    <ul>
+                        <li>Product Management</li>
+                        <li>Project Management</li>
+                        <li>Operations Management</li>
+                        <li>Tech & Team Leadership</li>
+                        <li>Marketing & Sales Strategy</li>
+                        <li>Financial Oversight</li>
+                        <li>Business Development</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="experience-section resume-section">
+            <h2 class="resume-section-title">Experience</h2>
+            <article class="item-entry">
+                <h3 class="item-title">Co-Founder, Director & COO</h3>
+                <p class="item-subtitle">Rejoice Media Private Limited | Ahmedabad, India</p>
+                <p class="item-date">June 2023 – Present</p>
+                <div class="item-description">
+                    <p>Leading the development and comprehensive operations for "V Prosper," an innovative wellness platform designed to connect certified trainers (Yoga, counselling, Marma therapy, etc.) with individuals seeking wellness services.</p>
+                    <ul>
+                        <li>Direct strategic oversight of all company operations, including Technology, Marketing & Sales initiatives, Financial planning, and continuous platform development.</li>
+                        <li>Define product vision, roadmap, and feature prioritization for V Prosper, ensuring alignment with market needs and business objectives.</li>
+                        <li>Manage and mentor cross-functional teams, fostering a collaborative environment to ensure timely delivery and high-quality execution of platform milestones.</li>
+                        <li>Successfully launched the MVP of V Prosper, leading to the onboarding of 50+ certified trainers and an initial user base of 200+ within the first three months.</li>
+                        <li>Implemented agile methodologies across tech and product teams, improving development velocity by an estimated 25%.</li>
+                    </ul>
+                </div>
+            </article>
+            <article class="item-entry">
+                <h3 class="item-title">Software Development Engineer</h3>
+                <p class="item-subtitle">Amazon | Berlin, Germany</p>
+                <p class="item-date">April 2021 – May 2023</p>
+                <div class="item-description">
+                    <p>Contributed to the development of backend services for Amazon's European marketplace, focusing on seller analytics and inventory management systems using Java, Spring Boot, and AWS technologies.</p>
+                    <ul>
+                        <li>Designed and implemented new microservices to process and visualize seller performance data, handling over 1 million daily transactions with high availability.</li>
+                        <li>Optimized database queries and caching strategies for critical inventory APIs, reducing average latency by 20% and improving system reliability.</li>
+                        <li>Collaborated in a global Agile team, participating in system design reviews, code reviews, and contributing to the successful deployment of three major feature releases.</li>
+                    </ul>
+                </div>
+            </article>
+            <article class="item-entry">
+                <h3 class="item-title">Software Engineer (Tools & Engine)</h3>
+                <p class="item-subtitle">Ubisoft | Düsseldorf, Germany</p>
+                <p class="item-date">July 2019 – March 2021</p>
+                <div class="item-description">
+                    <p>Worked within the core engine team contributing to the development of internal tools and engine components for "The Settlers" franchise, primarily using C++ and Python scripting.</p>
+                    <ul>
+                        <li>Developed and maintained asset pipeline tools, automating processes for artists and designers and reducing asset integration time by an estimated 15%.</li>
+                        <li>Contributed to the debugging and optimization of game engine subsystems, improving stability and performance on target platforms.</li>
+                        <li>Collaborated with gameplay programmers and level designers to provide engine support and develop custom editor functionalities.</li>
+                    </ul>
+                </div>
+            </article>
+        </section>
+
+        <section class="projects-section resume-section">
+            <h2 class="resume-section-title">Key Personal & Freelance Projects</h2>
+             <article class="item-entry">
+                <h3 class="project-title">V Prosper Wellness Platform</h3>
+                <p class="item-subtitle">Role: Co-Founder, Director & COO (Overseeing Tech & Product)</p>
+                 <div class="item-description">
+                    <p>Ongoing development of a comprehensive wellness platform. Leading product strategy, technical architecture decisions, and operational management.</p>
+                </div>
+            </article>
+            <article class="item-entry">
+                <h3 class="project-title">Democratise AI Platform</h3>
+                <p class="item-subtitle">Tech Stack: Python, FastAPI, SQLModel, PostgreSQL, React, Vite, Zustand, Tailwind CSS</p>
+                <div class="item-description">
+                    <p>Web platform simplifying ML workflows: user/project management, model/dataset hubs, training tracking.</p>
+                </div>
+                <div class="project-links">
+                    <a href="[Your GitHub Link for Democratise AI]" target="_blank">Code</a>
+                    <a href="[Your Live Link for Democratise AI]" target="_blank">Live Demo</a>
+                </div>
+            </article>
+            <article class="item-entry">
+                <h3 class="project-title">AI Agent Expo App (Audio Chatting)</h3>
+                <p class="item-subtitle">Tech Stack: Expo, React Native, Voice UI, STT/TTS, Expo AV, @11labs/react</p>
+                <div class="item-description">
+                    <p>Interactive mobile app for voice conversations with AI agents.</p>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/fractalxghost/AI_agents" target="_blank">Code</a>
+                    <a href="[Link to Expo Go project or Web Build]" target="_blank">Live Demo</a>
+                </div>
+            </article>
+        </section>
+
+        <section class="education-section resume-section">
+            <h2 class="resume-section-title">Education</h2>
+            <article class="item-entry">
+                <h3 class="degree-title">B.Sc. in Computer Science</h3>
+                <p class="university-name">TU Dortmund University, Dortmund, Germany</p>
+                <p class="education-date">September 2017 – April 2019</p>
+                <p>Thesis: <span class="placeholder-text">Development of a Recommender System using Collaborative Filtering</span></p>
+            </article>
+            <article class="item-entry">
+                <h3 class="degree-title">Studienkolleg (University Preparatory Program)</h3>
+                <p class="university-name">Greifswald University, Greifswald, Germany</p>
+                <p class="education-date">October 2016 – July 2017</p>
+            </article>
+        </section>
+
+    </div>
+</body>
+</html>
