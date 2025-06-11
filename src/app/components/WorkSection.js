@@ -39,12 +39,12 @@ export default function WorkSection() {
   // For liveLink, you'd need to deploy the Flask apps or link to a GitHub pages demo if applicable.
   const projects = [
     {
-      title: 'AI Content Idea Generator',
-      description: 'A Flask-based web app that uses AI (mocked) to generate content ideas and titles based on user input. Features a clean, modern dark UI.',
-      imageUrl: '/images/ai-content-generator-thumb.png', // Placeholder - replace with actual screenshot
-      tags: ['Python', 'Flask', 'HTML', 'CSS', 'JavaScript', 'AI (Mocked)'],
-      liveLink: '#', // Replace with actual deployment link or remove
-      codeLink: 'https://github.com/yourusername/content_idea_generator' // Replace with actual GitHub link
+      title: "Aethelred's Orrery: Interactive 3D Website",
+      description: "An immersive and fully responsive website featuring a celestial orrery theme. Users navigate a 3D solar system where each planet represents a content section, accessed via cinematic animations. Leverages react-three/fiber and GSAP for a dynamic user experience.",
+      imageUrl: '/images/aethelreds-orrery-thumb.jpg', // Placeholder - add your screenshot here
+      tags: ['React', 'Three.js', 'react-three/fiber', 'GSAP', '3D Web', 'Interactive Frontend'],
+      liveLink: 'https://aethelreds-orrery.vercel.app/',
+      codeLink: 'https://github.com/vibhu-thankii/aethelreds-orrery' // Replace with your repo link
     },
     {
       title: 'Smart Email Subject Optimizer',
