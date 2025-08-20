@@ -47,12 +47,12 @@ export default function WorkSection() {
       codeLink: 'https://github.com/vibhu-thankii/aethelreds-orrery' // Replace with your repo link
     },
     {
-      title: 'Smart Email Subject Optimizer',
-      description: 'Helps users craft compelling email subject lines. This Flask app (mocked AI) suggests optimized subjects based on email content and desired tone.',
-      imageUrl: '/images/subject-optimizer-thumb.png', // Placeholder
-      tags: ['Python', 'Flask', 'HTML', 'CSS', 'JavaScript', 'AI (Mocked)'],
-      liveLink: '#',
-      codeLink: 'https://github.com/yourusername/subject_line_optimizer'
+      title: 'Pulse: Competitive Intelligence Platform',
+      description: 'A web platform that provides a complete competitive picture by tracking rivals\' key metrics, real-time news, and market trends. It turns raw data into actionable strategy with AI-powered summaries.',
+      imageUrl: 'https://raw.githubusercontent.com/vibhu-thankii/pulse-dashboard/refs/heads/main/pulse.png', // **ACTION NEEDED**: Add a screenshot for Pulse to your `public/images` folder
+      tags: ['React', 'Vite', 'JavaScript', 'Web Application', 'SaaS', 'Competitive Intelligence', 'AI'],
+      liveLink: 'https://pulse-frontend-seven.vercel.app/',
+      codeLink: 'https://github.com/vibhu-thankii/pulse-frontend'
     },
     {
       title: 'Mini FAQ Chatbot',
