@@ -55,12 +55,12 @@ export default function WorkSection() {
       codeLink: 'https://github.com/vibhu-thankii/pulse-frontend'
     },
     {
-      title: 'Mini FAQ Chatbot',
-      description: 'An interactive chatbot (Flask backend, mocked responses) with a light, friendly UI, designed to answer frequently asked questions on a specific topic.',
-      imageUrl: '/images/faq-chatbot-thumb.png', // Placeholder
-      tags: ['Python', 'Flask', 'HTML', 'CSS', 'JavaScript', 'Chat UI'],
-      liveLink: '#',
-      codeLink: 'https://github.com/yourusername/faq_chatbot'
+      title: 'Aether AI: Voice-to-Voice AI Agents',
+      description: 'A platform for engaging in natural, real-time voice conversations with a universe of specialized AI agents, from personal companions to professional coaches.',
+      imageUrl: '/images/aether-ai.png', // **ACTION NEEDED**: Add a screenshot for Aether AI to your `public/images` folder
+      tags: ['Voice AI', 'Conversational AI', 'AI Agents', 'SaaS', 'React', 'Next.js'],
+      liveLink: 'https://aether-ai-ashen.vercel.app/',
+      codeLink: 'https://github.com/vibhu-thankii/aether-ai'
     },
     {
       title: 'Product Description Generator',
