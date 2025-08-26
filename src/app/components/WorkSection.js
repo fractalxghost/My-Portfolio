@@ -62,13 +62,13 @@ export default function WorkSection() {
       liveLink: 'https://aether-ai-ashen.vercel.app/',
       codeLink: 'https://github.com/vibhu-thankii/aether-ai'
     },
-    {
-      title: 'Product Description Generator',
-      description: 'A tool (Flask backend, mocked AI) for generating product descriptions based on product name, features, and target customer. Features a professional SaaS-like UI.',
-      imageUrl: '/images/product-desc-generator-thumb.png', // Placeholder
-      tags: ['Python', 'Flask', 'HTML', 'CSS', 'JavaScript', 'Copywriting Tool'],
-      liveLink: '#',
-      codeLink: 'https://github.com/yourusername/product_description_generator'
+   {
+      title: 'Elysian: Your AI Language Companion',
+      description: 'A cutting-edge, AI-powered web application designed to offer a fully personalized and adaptive English learning experience with features like dynamic content, comprehensive skill development, and gamified learning.',
+      imageUrl: '/images/Elysian.png', // **ACTION NEEDED**: Add a screenshot for Elysian to your `public/images` folder
+      tags: ['React', 'Python', 'FastAPI', 'MongoDB', 'Firebase', 'AI', 'Full-Stack'],
+      liveLink: 'https://elysian-nine.vercel.app/login', // Add your live link when available
+      codeLink: 'https://github.com/notofearth1-jpg/Elysian' // Add your repo link when available
     },
     // Add your original "Project One" and "Project Two" from index.html here
     // Or create a 5th AI project if you prefer
