@@ -73,27 +73,27 @@ export default function WorkSection() {
     // Add your original "Project One" and "Project Two" from index.html here
     // Or create a 5th AI project if you prefer
     {
-        title: 'Audio Chatting AI Agent', // Or your chosen title
-        description: 'An interactive mobile application built with Expo React Native, allowing users to engage in voice conversations with various AI agents. Features voice input/output, speech-to-text, text-to-speech, and a selection screen for different AI personalities.',
-        imageUrl: '/images/ai-audio-agent-expo-thumb.png', // The image we generated
-        tags: [
-          'Expo',
-          'React Native',
-          'AI Agent',
-          'Voice UI',
-          'Speech Recognition (STT)',
-          'Text-to-Speech (TTS)',
-          'Expo AV',
-          'Expo Speech',
-          'Mobile App',
-          'JavaScript',
-          // 'TypeScript', // If you used TypeScript in parts like ConvAI.tsx
-          // '@11labs/react', // If you want to highlight specific AI/voice services used
-          'Conversational AI'
-        ],
-        liveLink: 'https://dynamic-trifle-d0c910.netlify.app/', // If you deploy a web version
-        codeLink: 'https://github.com/fractalxghost/AI_agents' // Your GitHub link
-      },
+  "title": "Responder AI",
+  "description": "A web application designed to streamline customer support by generating context-aware, AI-powered draft responses to customer inquiries. Features an interactive dashboard, confidence scoring, light/dark mode, and a scalable full-stack architecture.",
+  "imageUrl": "/images/responder-thumb.png",
+  "tags": [
+    "Next.js",
+    "React",
+    "TypeScript",
+    "Tailwind CSS",
+    "Shadcn/ui",
+    "Python",
+    "FastAPI",
+    "Pydantic",
+    "Vercel",
+    "Render",
+    "Full-Stack",
+    "AI-Powered",
+    "Customer Support",
+    "Web App"
+  ],
+  "liveLink": "https://ai-support-responder-frontend.vercel.app/",
+  "codeLink": "https://github.com/vibhu-thankii/ai-support-responder-frontend"
       {
         title: 'Democratise AI Platform',
         description: "A web-based platform designed to make machine learning (ML) workflows more accessible. Built with a Python FastAPI backend, SQLModel/PostgreSQL for data management, and a React/Vite frontend with Zustand and Tailwind CSS, the platform provides a unified environment for users to manage AI projects, discover pre-trained models and datasets, and initiate/track model training runs. Key features include user/project management, model and dataset hubs, and an integrated interface with dashboards and settings.",
