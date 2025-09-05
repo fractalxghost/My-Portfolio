@@ -73,10 +73,10 @@ export default function WorkSection() {
     // Add your original "Project One" and "Project Two" from index.html here
     // Or create a 5th AI project if you prefer
     {
-  "title": "Responder AI",
-  "description": "A web application designed to streamline customer support by generating context-aware, AI-powered draft responses to customer inquiries. Features an interactive dashboard, confidence scoring, light/dark mode, and a scalable full-stack architecture.",
-  "imageUrl": "/images/responder-thumb.png",
-  "tags": [
+      title: 'Responder AI',
+      description: 'A web application designed to streamline customer support by generating context-aware, AI-powered draft responses to customer inquiries. Features an interactive dashboard, confidence scoring, light/dark mode, and a scalable full-stack architecture.',
+      imageUrl: '/images/responder-thumb.png',
+      tags: [
     "Next.js",
     "React",
     "TypeScript",
@@ -92,8 +92,10 @@ export default function WorkSection() {
     "Customer Support",
     "Web App"
   ],
-  "liveLink": "https://ai-support-responder-frontend.vercel.app/",
-  "codeLink": "https://github.com/vibhu-thankii/ai-support-responder-frontend"
+     liveLink: "https://ai-support-responder-frontend.vercel.app/",
+     codeLink: "https://github.com/vibhu-thankii/ai-support-responder-frontend"
+     },
+    
       {
         title: 'Democratise AI Platform',
         description: "A web-based platform designed to make machine learning (ML) workflows more accessible. Built with a Python FastAPI backend, SQLModel/PostgreSQL for data management, and a React/Vite frontend with Zustand and Tailwind CSS, the platform provides a unified environment for users to manage AI projects, discover pre-trained models and datasets, and initiate/track model training runs. Key features include user/project management, model and dataset hubs, and an integrated interface with dashboards and settings.",
